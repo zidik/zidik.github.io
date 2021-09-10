@@ -12,6 +12,13 @@
       box-sizing: border-box;
     }
 
+
+    html body {
+      margin: 0;
+      background-color: #ffffff;
+      height: 100%
+    }
+
     /* Responsive layout - makes a two column-layout instead of four columns */
     @media screen and (max-width: 800px) {
       .column {
@@ -27,6 +34,20 @@
         max-width: 100%;
       }
     }
+
+    .spacer {
+      aspect-ratio: 900/600;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .layer1 {
+      position: absolute;
+      bottom: 0;
+      background-image: url('./waves.svg');
+    }
   </style>
 </head>
 
@@ -37,6 +58,8 @@
 
   <h1>Welcome to Mark's test site!</h1>
   <a href="/">Navigate</a>
+
+  <div class="spacer layer1"></div>
 
   <script async src="//api.beta.salemove.com/salemove_integration.js"></script>
 </body>
