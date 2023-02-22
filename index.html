@@ -13,10 +13,26 @@
     }
 
 
-    html body {
+    body {
       margin: 0;
       background-color: #ffffff;
       height: 100%
+    }
+
+    .mobile-only{
+      display: none;
+    }
+
+    @media(max-width: 1200px) {
+      body {
+        background-color: lightblue;
+      }
+      .mobile-only{
+        display: block;
+      }
+      .normal-only{
+        display: none;
+      }
     }
 
     /* Responsive layout - makes a two column-layout instead of four columns */
@@ -58,6 +74,8 @@
 
   <h1>Welcome to Mark's test site!</h1>
   <a href="/">Navigate</a>
+  <h2 class="mobile-only">This is Mobile view!</h2>
+  <h2 class="normal-only">This is Wide view!</h2>
 
   <div class="spacer layer1"></div>
 
